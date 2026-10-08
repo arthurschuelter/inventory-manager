@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://rywo6giv5ugu"]
+
+[ext_resource type="Script" uid="uid://dxopbdwolyfhh" path="res://scenes/ui/item_node.gd" id="1_2aq71"]
+[ext_resource type="FontFile" uid="uid://bay7ibnj6tt8k" path="res://assets/fonts/JetBrainsMono.ttf" id="1_5hein"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0lmf7"]
+font = ExtResource("1_5hein")
+font_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="ItemNode" type="PanelContainer" unique_id=662204669]
+custom_minimum_size = Vector2(0, 16)
+custom_maximum_size = Vector2(80, -1)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_2aq71")
+
+[node name="ItemLabel" type="Label" parent="." unique_id=1183582447]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "description"
+label_settings = SubResource("LabelSettings_0lmf7")
+horizontal_alignment = 1
+vertical_alignment = 1

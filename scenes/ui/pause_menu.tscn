@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://ppdp8a28k8ih"]
+
+[ext_resource type="Script" uid="uid://wh0u1oox5jsi" path="res://scenes/ui/pause_menu.gd" id="1_myx47"]
+[ext_resource type="FontFile" uid="uid://bay7ibnj6tt8k" path="res://assets/fonts/JetBrainsMono.ttf" id="2_kukqi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jyhfs"]
+font = ExtResource("2_kukqi")
+font_size = 18
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.79607844)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tbgi4"]
+font = ExtResource("2_kukqi")
+font_size = 14
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.79607844)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f6eus"]
+font = ExtResource("2_kukqi")
+font_size = 8
+
+[node name="PauseMenu" type="Control" unique_id=5124277]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_myx47")
+
+[node name="Background" type="ColorRect" parent="." unique_id=711893268]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.21, 0.21, 0.21, 0.5019608)
+
+[node name="PauseLabel" type="Label" parent="." unique_id=617974590]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pause"
+label_settings = SubResource("LabelSettings_jyhfs")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuOptions" type="Control" parent="." unique_id=882506792]
+custom_minimum_size = Vector2(100, 180)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Inventory" type="VBoxContainer" parent="MenuOptions" unique_id=818333524]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="InventoryLabel" type="Label" parent="MenuOptions/Inventory" unique_id=1621648553]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+offset_transform_enabled = true
+text = "Inventory"
+label_settings = SubResource("LabelSettings_tbgi4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InventoryButtons" type="HBoxContainer" parent="MenuOptions" unique_id=63433212]
+custom_minimum_size = Vector2(0, 20)
+custom_maximum_size = Vector2(100, 20)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+alignment = 1
+
+[node name="SortButton" type="Button" parent="MenuOptions/InventoryButtons" unique_id=1888144756]
+custom_minimum_size = Vector2(40, 15)
+custom_maximum_size = Vector2(40, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ButtonLabel" type="Label" parent="MenuOptions/InventoryButtons/SortButton" unique_id=1367651924]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sort"
+label_settings = SubResource("LabelSettings_f6eus")
+horizontal_alignment = 1
+vertical_alignment = 1
